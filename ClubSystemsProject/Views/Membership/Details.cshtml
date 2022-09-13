@@ -1,0 +1,42 @@
+﻿@model ClubSystemsProject.Models.Membership
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Membership</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Member.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MembershipType.MembershipTypeID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MembershipType.MembershipTypeID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Balance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Balance)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MembershipID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
